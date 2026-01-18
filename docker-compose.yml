@@ -1,0 +1,11 @@
+services:
+  online-3d-viewer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: online-3d-viewer
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
